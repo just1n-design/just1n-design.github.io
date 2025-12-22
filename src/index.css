@@ -209,3 +209,66 @@
     filter: drop-shadow(0 0 30px rgba(255, 215, 0, 1)) drop-shadow(0 0 60px rgba(255, 215, 0, 0.6));
   }
 }
+
+/* Firework Burst Animation */
+@keyframes firework-burst {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(0.5) rotate(180deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+.animate-firework-burst {
+  animation: firework-burst 1.5s ease-out forwards;
+}
+
+/* Heart Firework Animation */
+@keyframes heart-firework {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) translateY(-50px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.5) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.animate-heart-firework {
+  animation: heart-firework 4s ease-in-out infinite;
+}
+
+/* Confetti Fall Animation */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+.animate-confetti-fall {
+  animation: confetti-fall 3s ease-in forwards;
+}
