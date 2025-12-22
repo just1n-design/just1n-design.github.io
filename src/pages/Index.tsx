@@ -6,6 +6,7 @@ import ChristmasLights from '@/components/ChristmasLights';
 import GiftBox from '@/components/GiftBox';
 import ContentSection from '@/components/ContentSection';
 import SpecialDateBanner from '@/components/SpecialDateBanner';
+import HiddenEasterEgg from '@/components/HiddenEasterEgg';
 
 const Index = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -22,6 +23,9 @@ const Index = () => {
       {/* Atmospheric Effects */}
       <Snowflakes />
       <ChristmasLights />
+      
+      {/* Hidden Easter Eggs */}
+      <HiddenEasterEgg />
 
       {/* Main Content */}
       <main className="relative z-30 px-4 md:px-8 py-12 md:py-20 max-w-5xl mx-auto">

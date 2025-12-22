@@ -178,4 +178,34 @@
       transparent 70%
     );
   }
+
+  /* Easter Egg Glow Effect */
+  .easter-egg-glow {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+    animation: subtle-pulse 3s ease-in-out infinite;
+  }
+
+  .easter-egg-hover:hover .easter-egg-glow {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+    animation: glow-pulse 1s ease-in-out infinite;
+  }
+}
+
+/* Easter Egg Animations */
+@keyframes subtle-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 1)) drop-shadow(0 0 60px rgba(255, 215, 0, 0.6));
+  }
 }
