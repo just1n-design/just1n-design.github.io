@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Für Vicuschaaa</title>
+  <script>
+    // Redirect to index.html with the current path as a parameter
+    // This is needed for React Router to work on GitHub Pages
+    const path = window.location.pathname.replace('/website/', '/');
+    const query = window.location.search;
+    window.history.replaceState(null, null, '/website/' + (path === '/' ? '' : '?p=' + path + query));
+    window.location.replace('/website/');
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
