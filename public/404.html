@@ -7,10 +7,10 @@
   <script>
     // Redirect to index.html with the current path as a parameter
     // This is needed for React Router to work on GitHub Pages
-    const path = window.location.pathname.replace('/website/', '/');
+    const path = window.location.pathname;
     const query = window.location.search;
-    window.history.replaceState(null, null, '/website/' + (path === '/' ? '' : '?p=' + path + query));
-    window.location.replace('/website/');
+    window.history.replaceState(null, null, path === '/' ? '/' : '?p=' + path + query);
+    window.location.replace('/');
   </script>
 </head>
 <body>
